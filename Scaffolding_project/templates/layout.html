@@ -81,18 +81,24 @@
              <div class="container-fluid">
                  <button type="button" id="sidebarCollapse" class="btn btn-info">
                      <i class="fas fa-align-left"></i>
-                 </button>
+                 </button>_______
+                 {% if messages %}
+                 {% for message in messages %}
+                 <span style="font-size:x-large; font-weight:800;" {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</span>
+                 {% endfor %}
+                 {% endif %}
+
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="nav navbar-nav ml-auto">
                          <li class="nav-item active navbar-btn">
-                            <a href="#">
-                                <i class="fas fa-cog fa-2x" ></i>
-                            </a>
+                             <a href="#">
+                                 <i class="fas fa-cog fa-2x"></i>
+                             </a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="#">
-                             Page
-                            </a>
+                             <a class="nav-link" href="#">
+                                 Page
+                             </a>
                          </li>
                      </ul>
                  </div>

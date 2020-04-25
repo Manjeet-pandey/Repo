@@ -3,7 +3,7 @@ from django.urls import reverse
 
 # Create your models here.
 class ProductRegister(models.Model):
-    product_Name= models.CharField(max_length=100)
+    productName= models.CharField(max_length=100)
     productMaterialItemCode= models.CharField(max_length=100)
     productBrandNewSellingRate= models.FloatField()
     productSecondHandSellingRate= models.FloatField()
@@ -26,5 +26,11 @@ class ProductRegister(models.Model):
     def get_update_url(self):
         return reverse('product_update',args=[self.id])
 
+    def get_delete_url(self):
+        return reverse('product_delete',args=[self.id])
+
     def __str__(self):
-        return self.product_Name
+        return self.productName
+
+    class Meta:
+        ordering=['productName']

@@ -10,12 +10,12 @@ class ProductFilter(django_filters.FilterSet):
     ordering=django_filters.ChoiceFilter(label='order',choices=CHOICES, method='sorting_method')
 
     def sorting_method(self,queryset,name,value):
-        expression= 'product_Name'if value=='a' else '-product_Name'
+        expression= 'productName'if value=='a' else '-productName'
         return queryset.order_by(expression)
 
     class Meta:
         model=ProductRegister
         fields={
-            'product_Name':['icontains'],
+            'productName':['icontains'],
             'productMaterialItemCode':['icontains']
             }

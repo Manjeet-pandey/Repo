@@ -6,19 +6,13 @@
 {% block content%}
 
     <div class="container" style="margin: 10px;padding: 10px;">
-        <div class="card-group" style="max-width: 50rem;">
-            <div class="card" style="margin:10px;">
-            <img class="card-img-top w-100 d-block"></div>
-            <div class="card" style="margin:10px;">
+        <div class="card-group" >
+
+            <div class="card" style="margin:10px;width:500rem;">
                 <div class="card-body">
                     <h4 class="card-title">{{product.productName}}</h4>
                     <p class="card-text">
                         <table align="center">
-                            <tr>
-                                <td>
-                                    <h1>Add Product</h1>
-                                </td>
-                            </tr>
                             <tr>
                                 <td><b> Product Name:</b></td>
                                 <td>{{product.productName}}</td>
@@ -77,11 +71,16 @@
                             </tr>
                         </table>
                     </p>
-                    <button class="btn btn-primary border rounded" type="button" style="margin: 5px;">Button 1</button>
-                    <button class="btn btn-warning border rounded" type="button" style="margin: 5px;">Button 1</button>
-                    <button class="btn btn-danger border rounded" type="button" style="margin: 5px;">Button 1</button>
-                    
+                    <a href="{{product.get_update_url}}">
+                        <button class="btn btn-warning border rounded" type="button" style="margin: 5px;">Edit</button>
+                    </a>
+                    <a href="{{product.get_delete_url}}">
+                        <button class="btn btn-danger border rounded" type="button" style="margin: 5px;">Delete</button>
+                    </a>
                 </div>
+            </div>
+            <div class="card" style="margin:10px;">
+                <img class="card-img-top w-100 d-block">
             </div>
         </div>
     </div>
