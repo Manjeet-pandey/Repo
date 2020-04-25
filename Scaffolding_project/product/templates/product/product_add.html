@@ -1,0 +1,183 @@
+{%extends 'layout.html' %}
+
+{% block title %}
+<title>{{title}}</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card" style="max-width: 50rem;">
+    <div class="form-group text-center">
+        <form method="post" name="AddProduct">
+            {% csrf_token %}
+            <div class="row my-row">
+                <div class="col my-col col-lg-6 col-md-8">
+                    <h3> Add Product</h3>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col  col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        {{form.product_Name}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        {{form.productMaterialItemCode}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-12 col-lg-6">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productBrandNewSellingRate}}
+                    </div>
+                </div>
+                <div class="col my-col col-12 col-sm-12 col-lg-5">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productSecondHandSellingRate}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-12 col-sm-12 col-lg-6">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productLossRate}}
+                    </div>
+                </div>
+                <div class="col my-col col-12 col-sm-12 col-lg-5">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productRepairRate}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-registered"></i>
+                        </div>
+                        {{form.productCleaningRate}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col col my-col col-12 col-sm-12 col-lg-6">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productDailyRentalRate}}
+                    </div>
+                </div>
+                <div class="col my-col col-12 col-sm-12 col-lg-5">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productWeeklyRentalRate}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-registered"></i>
+                        </div>
+                        {{form.productMonthlyRentalRate}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-12 col-sm-12 col-lg-6">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productDailyHireCharge}}
+                    </div>
+                </div>
+                <div class="col my-col col-12 col-sm-12 col-lg-5">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-unlock"></i>
+                        </div>
+                        {{form.productWeeklyHireCharge}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-registered"></i>
+                        </div>
+                        {{form.productMonthlyHireCharge}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        {{form.productRecordedBy}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        {{form.supplierName}}
+                    </div>
+                </div>
+            </div>
+            <div class="row my-row">
+                <div class="col my-col col-sm-12 col-lg-11">
+                    <div class="input-group">
+                        <div style="width:40px" class="input-group-prepend input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        {{form.remarks}}
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-success border rounded" type="submit" style="margin: 5px;">{{action}}</button>
+            <button class="btn btn-warning border rounded" type="reset" style="margin: 5px;">Reset</button>
+            <a href="{%url 'dashboard'%}">
+                <button class="btn btn-danger border rounded" type="button" style="margin: 5px;">Cancel</button>
+            </a>
+
+        </form>
+    </div>
+
+</div>
+{% endblock %}

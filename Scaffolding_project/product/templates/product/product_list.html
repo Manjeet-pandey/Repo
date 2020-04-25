@@ -1,0 +1,43 @@
+{% extends 'layout.html'%}
+
+{% block title %}
+    <title>Product List</title>
+{% endblock %}
+
+{% block content%}
+    <form method="GET">
+        {{filter.form }}
+        <button class='btn btn-primary' type="submit">search</button>
+    </form>
+    <h2>Product List</h2>
+    {% if filter.qs%}
+    <table class="table table-hover" style="text-align:center">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Item Code</th>
+                <th>SellingPrice</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in filter.qs%}
+            <tr>
+                <td><a href="{{ product.get_absolute_url }}">{{product}}</a></td>
+                <td>{{product.productMaterialItemCode}}</td>
+                <td>{{product.productBrandNewSellingRate}}</td>
+                <td><a href="{{product.get_update_url}}"><button class="btn btn-warning">Edit</button></a></td>
+                <td><a href="#"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+        </tbody>
+
+        {% endfor%}
+    </table>
+    {% else %}
+        <H2>No product found </H2>
+    {% endif %}
+
+
+        
+
+{% endblock %}

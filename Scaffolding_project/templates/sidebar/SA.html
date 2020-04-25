@@ -1,0 +1,118 @@
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h3>G-Cladd</h3>
+        <strong>GC</strong>
+    </div>
+   <ul class="list-unstyled components">
+        <li >
+            <a href="{% url 'dashboard'%}">
+                <i class="fas fa-home fa-2x"></i>
+                <span class="CTAs"> &ensp;Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-user-plus fa-2x"></i>
+                <span class="CTAs">&nbsp;Product
+                    <i class="fas fa-caret-down"></i>
+                </span>
+            </a>
+            <ul class=" collapse list-unstyled" id="productSubmenu">
+                <li>
+                    <a href="{% url 'product_add'%}">Add</a>
+                </li>
+                <li>
+                    <a href="{% url 'product_list'%}">View All</a>
+                </li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-user-plus fa-2x"></i>
+                <span class="CTAs">&nbsp;Supplier
+                    <i class="fas fa-caret-down"></i>
+                </span>
+            </a>
+            <ul class=" collapse list-unstyled" id="supplierSubmenu">
+                <li>
+                    <a href="#">Add</a>
+                </li>
+                <li>
+                    <a href="#">Edit</a>
+                </li>
+                <li>
+                    <a href="#">View All</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#projectSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-user-plus fa-2x"></i>
+                <span class="CTAs">&nbsp;Project
+                    <i class="fas fa-caret-down"></i>
+                </span>
+            </a>
+            <ul class=" collapse list-unstyled" id="projectSubmenu">
+                <li>
+                    <a href="#">Add</a>
+                </li>
+                <li>
+                    <a href="#">Edit</a>
+                </li>
+                <li>
+                    <a href="#">View All</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-user-plus fa-2x"></i>
+                <span class="CTAs">&nbsp;Users
+                    <i class="fas fa-caret-down"></i>
+                </span>
+            </a>
+            <ul class=" collapse list-unstyled" id="userSubmenu">
+                <li>
+                    <a href="#">Add</a>
+                </li>
+                <li>
+                    <a href="#">Edit</a>
+                </li>
+                <li>
+                    <a href="#">View All</a>
+                </li>
+            </ul>
+        </li>
+
+        
+        <li>
+            <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false">
+                <i class="fas fa-list fa-2x"></i>
+                <span class="CTAs">
+                    &emsp;Order<i class="fas fa-caret-down"></i>
+                </span>
+            </a>
+            <ul class=" collapse list-unstyled" id="orderSubmenu">
+                <li>
+                    <a href="#">View All</a>
+                </li>
+                <li>
+                    <a href="#">Approve</a>
+                </li>
+                 <li>
+                    <a href="#">Payment</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                    <i class="fas fa-power-off fa-2x"></i>
+                    <span class="CTAs"> &ensp;Log Out</span>
+                </a>
+        </li>
+   </ul>
+</nav>
