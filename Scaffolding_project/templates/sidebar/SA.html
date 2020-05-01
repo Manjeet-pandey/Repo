@@ -67,7 +67,7 @@
                 </li>
             </ul>
         </li>
-
+       {%if request.user.is_staff %}
         <li>
             <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false">
                 <i class="fas fa-user-plus fa-2x"></i>
@@ -87,7 +87,7 @@
                 </li>
             </ul>
         </li>
-
+        {%endif%}
         
         <li>
             <a href="#orderSubmenu" data-toggle="collapse" aria-expanded="false">
